@@ -1,9 +1,25 @@
-print("calculadora de mc")
+while True:
+    print("\n--- Calculadora ---")
+    
+    num1 = float(input("Digite o primeiro número: "))
+    operacao = input("Escolha (+, -, *, /) ou 'sair': ")
+    
+    if operacao == "sair":
+        print("Encerrando calculadora...")
+        break
 
-a = int(input('digite um numero.:'))
-b = int(input('digite outro  numero.:'))
+    num2 = float(input("Digite o segundo número: "))
 
-if a % b == 0:
-    print('e divisivel')
-else:
-    print('nao e divisivel')
+    if operacao == "+":
+        print("Resultado:", num1 + num2)
+    elif operacao == "-":
+        print("Resultado:", num1 - num2)
+    elif operacao == "*":
+        print("Resultado:", num1 * num2)
+    elif operacao == "/":
+        if num2 != 0:
+            print("Resultado:", num1 / num2)
+        else:
+            print("Erro: divisão por zero")
+    else:
+        print("Operação inválida")
